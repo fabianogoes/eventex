@@ -1,0 +1,63 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EventeX</title>
+    <link type="text/css" href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet" media="screen" />
+
+    <!-- Le styles -->
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}ico/favicon.png">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hero-unit">
+
+        <a href="#"><img src="{{ STATIC_URL }}img/logo.png" /></a>
+        <hr />
+        <h1>Bem-vindo ao EventeX!</h1>
+        <p>O evento mais sensacional do ano depois do Dev in Rio!</p>
+        <p>Você não pode perder esta oportunidade!</p>
+
+        <p><strong>Abertura das inscrições no próximo domingo.</strong></p>
+
+        <p>Para dúvidas e mais informações entre em contato com <a href="#">eventext@eventext.com.br</a></p>
+      </div> <!-- <div class="hero-unit"> -->
+
+        <hr>
+        <footer>
+            <p>&copy; 2013. <a href="#">EventeX</a>, some rights reserved.</p>
+        </footer>
+
+    </div> <!-- /container -->
+
+
+</body>
+</html>
