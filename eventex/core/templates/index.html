@@ -5,6 +5,9 @@
     <title>EventeX</title>
     <link type="text/css" href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet" media="screen" />
 
+    <link href="{{ STATIC_URL }}css/docs.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/pygments-manni.css" rel="stylesheet">
+
     <!-- Le styles -->
     <style type="text/css">
       body {
@@ -24,45 +27,79 @@
 </head>
 <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
+    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
         <div class="container">
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
+          <div class="nav-collapse collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a data-toggle="modal" href="#myModal">About</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
-      </div>
     </div>
 
     <div class="container">
       <div class="hero-unit">
 
-        <div>
-            <a href="#"><img src="{{ STATIC_URL }}img/logo.png" /></a>
+        <div class="content-center">
+          <div>
+                <a href="/"><img src="{{ STATIC_URL }}img/logo.png" /></a>
+          </div>
+          <hr />
+          <h1>Bem-vindo ao EventeX!</h1>
+          <p>O evento mais sensacional do ano depois do Dev in Rio!</p>
+          <p>Você não pode perder esta oportunidade!</p>
+          <p><strong>Abertura das inscrições no próximo domingo.</strong></p>
+          <p>Para dúvidas e mais informações entre em contato com <a href="#">eventext@eventext.com.br</a></p>
         </div>
-        <hr />
-        <h1>Bem-vindo ao EventeX!</h1>
-        <p>O evento mais sensacional do ano depois do Dev in Rio!</p>
-        <p>Você não pode perder esta oportunidade!</p>
-
-        <p><strong>Abertura das inscrições no próximo domingo.</strong></p>
-
-        <p>Para dúvidas e mais informações entre em contato com <a href="#">eventext@eventext.com.br</a></p>
       </div> <!-- <div class="hero-unit"> -->
 
-        <hr>
-        <footer>
-            <p>&copy; 2013. <a href="#">EventeX</a>, some rights reserved. &nbsp;
-            <img src="{{ STATIC_URL }}img/80x15.png"> &nbsp;
-            <img src="{{ STATIC_URL }}img/djangosite100x25.gif">
-            </p>
-        </footer>
+      <hr>
+      <footer>
+          <p>&copy; 2013. <a href="#">EventeX</a>, some rights reserved. &nbsp;
+          <img src="{{ STATIC_URL }}img/80x15.png"> &nbsp;
+          <img src="{{ STATIC_URL }}img/djangosite100x25.gif" class="pull-right">
+          </p>
+      </footer>
 
     </div> <!-- /container -->
 
 
+  <!-- Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Eventex - About</h4>
+        </div>
+        <div class="modal-body">
+            <div class="content-center">
+            <p>Projeto desenvolvido durante o curso: <strong>Welcome to the Django</strong> - turma 11</p>
+            <p>
+                <a href="http://welcometothedjango.com.br/" target="_blank">
+                <img src="{{ STATIC_URL }}img/welcomedjango.png">
+                </a>
+            </p>
+            <p>Para dúvidas e mais informações entre em contato com <a href="#">eventext@eventext.com.br</a></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<!-- JS and analytics only.====================================================== -->
+<!-- Bootstrap core JavaScript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{ STATIC_URL }}js/jquery.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="{{ STATIC_URL }}js/holder.js"></script>
+<script src="{{ STATIC_URL }}js/application.js"></script>
+
 </body>
 </html>
+
