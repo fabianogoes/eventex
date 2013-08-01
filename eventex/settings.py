@@ -3,6 +3,7 @@
 
 import os
 import dj_database_url
+import subscriptions
 from unipath import Path
 PROJECT_DIR = Path(__file__).parent
 
@@ -137,6 +138,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'eventex.core',
+    'eventex.subscriptions',
 )
 
 # A sample logging configuration. The only tangible logging

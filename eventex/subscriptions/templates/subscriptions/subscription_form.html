@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EventeX</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/docs.css" rel="stylesheet">
+    <link href="/static/css/pygments-manni.css" rel="stylesheet">
+
+    <!-- Le styles -->
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/img/favicon.png">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+        <div class="container">
+          <div class="nav-collapse collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">EventeX</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="hero-unit">
+        <div class="content">
+            <!-- Conteudo da pagina -->
+
+            <h1>Formulário de inscrição</h1>
+            <!-- Form -->
+            <form action="." method="POST" class="forms-horizontal">
+                <p>
+                        <label for="id_nome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nome:
+                                <input id="id_nome" type="text" class="form-control span10" name="nome" maxlength="100" />
+                        </label>
+                </p>
+                <p>
+                        <label for="id_email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:
+                                <input id="id_email" type="text" class="form-control span10" name="email" maxlength="75" />
+                        </label>
+                </p>
+                <p>
+                        <label for="id_cpf">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CPF:
+                                <input id="id_cpf" type="text" name="cpf" class="form-control span3" maxlength="11" />
+                        </label>
+                </p>
+                <p>
+                        <label for="id_phone">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Telefone:
+                                <input id="id_phone" type="text" name="phone" class="form-control span3" maxlength="20" />
+                        </label>
+                </p>
+                <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="submit" value="Enviar" class="btn btn-primary">
+                </p>
+            </form>
+            <!-- Form -->
+
+            <!-- Conteudo da pagina -->
+        </div><!-- <div class="content-center"> -->
+      </div> <!-- <div class="hero-unit"> -->
+
+      <hr>
+      <footer>
+          <p>&copy; 2013. <a href="#">EventeX</a>, some rights reserved. &nbsp;
+          <img src="/static/img/80x15.png"> &nbsp;
+          <img src="/static/img/djangosite100x25.gif" class="pull-right">
+          </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="/static/js/holder.js"></script>
+<script src="/static/js/application.js"></script>
+
+
+</body>
+</html>
+
