@@ -3,8 +3,9 @@
 <html>
 <head>
     <title>EventeX</title>
-    <link type="text/css" href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet" media="screen" />
 
+    <!-- Bootstrap core CSS -->
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/docs.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/pygments-manni.css" rel="stylesheet">
 
@@ -16,14 +17,7 @@
       }
     </style>
     <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="{{ STATIC_URL }}favicon.png">
+    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.png">
 </head>
 <body>
 
@@ -31,8 +25,7 @@
         <div class="container">
           <div class="nav-collapse collapse bs-navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a data-toggle="modal" href="#myModal">About</a></li>
+              <li class="active"><a href="/">EventeX</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -65,40 +58,15 @@
     </div> <!-- /container -->
 
 
-  <!-- Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Eventex - About</h4>
-        </div>
-        <div class="modal-body">
-            <div class="content-center">
-            <p>Projeto desenvolvido durante o curso: <strong>Welcome to the Django</strong> - turma 11</p>
-            <p>
-                <a href="http://welcometothedjango.com.br/" target="_blank">
-                <img src="{{ STATIC_URL }}img/welcomedjango.png">
-                </a>
-            </p>
-            <p>Para dúvidas e mais informações entre em contato com <a href="#">eventext@eventext.com.br</a></p>
-            </div>
-        </div>
-        <div class="modal-footer">
-          <a href="#" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</a>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-<!-- JS and analytics only.====================================================== -->
-<!-- Bootstrap core JavaScript ================================================== -->
+<!-- Bootstrap core JavaScript
+================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="{{ STATIC_URL }}js/jquery.js"></script>
 <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 <script src="{{ STATIC_URL }}js/holder.js"></script>
 <script src="{{ STATIC_URL }}js/application.js"></script>
+
 
 </body>
 </html>
