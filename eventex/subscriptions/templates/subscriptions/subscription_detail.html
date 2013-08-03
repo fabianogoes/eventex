@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <p>
+      <div class="alert alert-success">
+        Parabéns {{ subscription.name }},
+      </div>
+    </p>
+
+
+    <p>Sua inscrição foi realizada em:
+        <span class="badge badge-inverse">
+            {{ subscription.created_at|date:"d/m/Y" }}.
+        </span>
+    </p>
+    <p>Em breve, entraremos em contato pelo
+        {% if subscription.phone %}
+            telefone: <span class="badge badge-inverse">{{ subscription.phone }}</span>
+        {% else %}
+            e-mail: <span class="badge badge-inverse">{{ subscription.email }}</span>
+        {% endif %}
+    </p>
+
+    <a class="btn btn-primary" href="/">OK</a>
+{% endblock content %}
