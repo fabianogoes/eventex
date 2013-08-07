@@ -10,6 +10,10 @@ PROJECT_DIR = Path(__file__).parent
 DEBUG = os.environ.get('DEBUG') == 'True'
 TEMPLATE_DEBUG = DEBUG
 
+# Usar o South para preparar o banco nos tests?
+# True: Sim (default)
+# False: Não! Use o Syncdb
+SOUTH_TESTS_MIGRATE = False
 
 ADMINS = (
     (u'Fabiano Góes', 'fabianogoes@gmail.com'),
@@ -134,6 +138,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'south',
     'eventex.core',
     'eventex.subscriptions',
 )
