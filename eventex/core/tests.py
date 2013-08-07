@@ -6,12 +6,12 @@ Replace this with more appropriate tests for your application.
 """
 
 from django.test import TestCase
+from django.core.urlresolvers import reverse as r
 
 
 class HomepageTest(TestCase):
     def setUp(self):
-        self.tearDown()
-        self.resp = self.client.get('/')
+        self.resp = self.client.get(r('core:homepage'))
 
     def test_get(self):
         'GET / must return status code 200.'
