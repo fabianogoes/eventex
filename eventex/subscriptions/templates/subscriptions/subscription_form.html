@@ -7,6 +7,7 @@
     <form action="." method="POST" class="forms-horizontal">
         {% csrf_token %}
         <fieldset class="form-actions">
+            {{ form.non_field_errors }}
             <div class="control-group">
                 <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
                 <div class="controls">
@@ -44,9 +45,11 @@
                 <label for="form.phone.id_for_label">{{ form.phone.label }}:</label>
                 <div class="controls">
                     {% if form.phone.value %}
-                        <input id="id_phone" type="text" name="phone" class="form-control span3" maxlength="20" value="{{ form.phone.value }}"/>
+                        (<input id="id_phone_0" type="text" name="phone_0" class="form-control span1" maxlength="20" value="{{ form.phone_0.value }}"/>)
+                        <input id="id_phone_1" type="text" name="phone_1" class="form-control span3" maxlength="20" value="{{ form.phone_1.value }}"/>
                     {% else %}
-                        <input id="id_phone" type="text" name="phone" class="form-control span3" maxlength="20" />
+                        (<input id="id_phone_0" type="text" name="phone_0" class="form-control span1" maxlength="20" />)
+                        <input id="id_phone_1" type="text" name="phone_1" class="form-control span3" maxlength="20" />
                     {% endif %}
                     {{ form.phone.errors }}
                 </div>                           
