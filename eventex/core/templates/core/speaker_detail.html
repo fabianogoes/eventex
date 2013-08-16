@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content-center">
+        <div>
+            <a href="/"><img src="{{ STATIC_URL }}img/logo.png" /></a>
+        </div>
+        <hr />
+    </div>
+
+    <h4><a href="{{ speaker.url }}">{{ speaker.name }}</a></h4>
+    <p>{{ speaker.description }}}</p>
+{% endblock content %}
