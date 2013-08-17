@@ -56,5 +56,17 @@ class Talk(models.Model):
         return self.title     
 
     def get_absolute_url(self):
-        return '/palestras/%d/' % self.pk         
+        return '/palestras/%d/' % self.pk
 
+class Course(Talk):
+    slots = models.IntegerField()
+    notes = models.TextField()
+
+    objects = PeriodManager()
+
+class CodingCourse(Course):
+    class Meta:
+        proxy = True
+    
+    def do_some_python_stuff(self):
+        return "Let's hack! at %s" % self.title    
