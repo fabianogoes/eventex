@@ -56,7 +56,14 @@
         </div>
     </div>
 
-    <div class="container">        
+    <div class="container">    
+    {% if user.is_authenticated %}
+                Usuário Logado <i class="icon-user"></i>: 
+                <span class="label badge-inverse">{{ user.username }}</span>&nbsp;
+            {% else %}
+                Usuário Logado <i class="icon-user"></i>: 
+                <span class="label badge-inverse">Nenhum usuário logado</span>&nbsp;
+            {% endif %}     
     {% block content %}
         <div class="content-center">
 
