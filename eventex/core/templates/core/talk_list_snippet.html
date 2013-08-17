@@ -1,12 +1,22 @@
 <div class="palestra">
     <h4>
-        <a href="{{ talk.get_absolute_url }}">{{ talk.start_time }} - {{ talk.title }}</a>
+        <a href="{{ talk.get_absolute_url }}">
+            <i class="icon-time"></i>&nbsp;{{ talk.start_time }}&nbsp;
+            <i class="icon-flag"></i>&nbsp;{{ talk.title }}</a>
     </h4>
     {% for speaker in talk.speakers.all %}
         <h5>
-            <a href="{{ speaker.get_absolute_url }}" title="{{ speaker.description|truncatewords:30 }}">{{ speaker.name }}</a>
+            <i class="icon-user"></i>&nbsp;<a href="{{ speaker.get_absolute_url }}" 
+                title="{{ speaker.description|truncatewords:30 }}">{{ speaker.name }}</a>
         </h5>
     {% endfor %}
-    <p>{{ talk.description }}</p>
+    <p><i class="icon-list"></i>&nbsp;{{ talk.description }}</p>
+    <p>
+        <a class="btn btn-primary" 
+            href="http://eventex-fabianogoes.herokuapp.com/admin/core/talk/{{talk.pk}}/" 
+            target="__blank">
+        <i class="icon-pencil icon-white"></i>&nbsp;Editar</a>
+    </p>
+    <hr />
 </div>
 

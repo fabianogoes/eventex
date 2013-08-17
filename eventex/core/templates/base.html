@@ -31,18 +31,25 @@
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="/">EventeX</a></li>
                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inscrições<b class="caret"></b></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon-pencil icon-white"></i>&nbsp;Inscrições<b class="caret"></b></a>
                       <ul class="dropdown-menu">
-                        <li><a href="{% url 'subscriptions:subscribe' %}">Inscreva-se já</a></li>
-                        <li><a href="/admin/subscriptions/subscription/" target="__blank">Lista de Inscritos</a></li>
+                        <li><a href="{% url 'subscriptions:subscribe' %}">
+                            <i class="icon-plus icon-white"></i>&nbsp;Inscreva-se já</a></li>
+                        <li><a href="/admin/subscriptions/subscription/" target="__blank">
+                            <i class="icon-list icon-white"></i>&nbsp;Lista de Inscritos</a></li>
                       </ul>
                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Palestras<b class="caret"></b></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="icon-tags icon-white"></i>&nbsp;Palestras<b class="caret"></b></a>
                       <ul class="dropdown-menu">
-                        <li><a href="{% url 'core:talk_list' %}">Lista de Palestras</a></li>
-                        <li><a href="/admin/core/talk/add/" target="__blank">Cadastrar Palestra</a></li>
+                        <li><a href="/admin/core/talk/add/" target="__blank">
+                            <i class="icon-plus icon-white"></i>&nbsp;Cadastrar Palestra</a></li>
+                        <li><a href="{% url 'core:talk_list' %}">
+                            <i class="icon-list icon-white"></i>&nbsp;Lista de Palestras</a></li>
                       </ul>
-                  <li><a href="#myModal" role="button" data-toggle="modal">Sobre</a></li>
+                  <li><a href="#myModal" role="button" data-toggle="modal">
+                      <i class="icon-info-sign icon-white"></i>&nbsp;Sobre</a></li>
                 </ul>
               </div><!--/.nav-collapse -->
             </div>
