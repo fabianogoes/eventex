@@ -30,9 +30,19 @@
               <div class="nav-collapse collapse bs-navbar-collapse">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="/">EventeX</a></li>
-                  <li><a href="{% url 'subscriptions:subscribe' %}">Inscreva-se já...</a></li>
-                  <li><a href="/admin/subscriptions/subscription/" target="__blank">Lista de inscritos...</a></li>
-                  <li><a href="#myModal" role="button" data-toggle="modal">About</a></li>
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inscrições<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="{% url 'subscriptions:subscribe' %}">Inscreva-se já</a></li>
+                        <li><a href="/admin/subscriptions/subscription/" target="__blank">Lista de Inscritos</a></li>
+                      </ul>
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Palestras<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="{% url 'core:talk_list' %}">Lista de Palestras</a></li>
+                        <li><a href="/admin/core/talk/add/" target="__blank">Cadastrar Palestra</a></li>
+                      </ul>
+                  <li><a href="#myModal" role="button" data-toggle="modal">Sobre</a></li>
                 </ul>
               </div><!--/.nav-collapse -->
             </div>
