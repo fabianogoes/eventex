@@ -3,7 +3,6 @@
 
 import os
 import dj_database_url
-import subscriptions
 from unipath import Path
 PROJECT_DIR = Path(__file__).parent
 
@@ -141,7 +140,15 @@ INSTALLED_APPS = (
     'south',
     'eventex.core',
     'eventex.subscriptions',
+    'eventex.myauth',
 )
+
+AUTH_USER_MODEL='myauth.User'
+
+#AUTHENTICATION_BACKENDS = (
+#    'eventex.myauth.backends.EmailBackend',
+#    'django.contrib.auth.backends.ModelBackend',
+#)
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
