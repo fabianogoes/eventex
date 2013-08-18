@@ -48,6 +48,14 @@ class Talk(models.Model):
 
     objects = PeriodManager()
 
+    @property
+    def videos(self):
+        return self.media_set.filter(kind='YT')
+
+    @property
+    def slides(self):
+        return self.media_set.filter(kind='SL')    
+
     class Meta:
         verbose_name=_('palestra')
         verbose_name_plural = _('palestras')
@@ -56,7 +64,7 @@ class Talk(models.Model):
         return self.title     
 
     def get_absolute_url(self):
-        return '/palestras/%d/' % self.pk
+        return '/palestra/%d/' % self.pk
 
 class Course(Talk):
     slots = models.IntegerField()
@@ -76,9 +84,9 @@ class Media(models.Model):
         ('YT', _('YouTube')),
         ('SL', _('SlideShare')),
     )
-    talk = models.ForeignKey('Talk')
+    talk = models.ForeignKey('Talk', verbose_name=_('palestra')) 
     kind = models.CharField(_('Tipo'), max_length=2, choices=MEDIAS)
-    title = models.CharField(_(u'Título'), max_length=2)
+    title = models.CharField(_(u'Título'), max_length=200)
     media_id = models.CharField(_('Ref'), max_length=255)
 
     def __unicode__(self):

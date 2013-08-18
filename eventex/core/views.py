@@ -13,12 +13,17 @@ def speaker_detail(request, slug):
     return render(request, 'core/speaker_detail.html', context)
 
 def talk_detail(request, pk):
+    """
+     Código refatorado, foi criado as properties:
+       videos e slides na model Talk,
+       assim enviando talk no context, automaticamente
+       terá videos e slides
+    """     
     talk = get_object_or_404(Talk, pk=pk)
-    #talk = Talk()
     context = {
-        'talk': talk,
-        'slides': talk.media_set.filter(kind='SL'),
-        'videos': talk.media_set.filter(kind='YT'),
+        'talk': talk,          
+        #'slides': talk.media_set.filter(kind='SL'),
+        #'videos': talk.media_set.filter(kind='YT'),
     }
     return render(request, 'core/talk_detail.html', context)
 

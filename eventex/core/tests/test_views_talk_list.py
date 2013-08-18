@@ -30,8 +30,8 @@ class TalkListTest(TestCase):
     def test_html(self):
         'Html should list talks.'
         self.assertContains(self.resp, u'Título da palestra', 2)
-        self.assertContains(self.resp, u'/palestras/1/')
-        self.assertContains(self.resp, u'/palestras/2/')
+        self.assertContains(self.resp, u'/palestra/1/')
+        self.assertContains(self.resp, u'/palestra/2/')
         self.assertContains(self.resp, u'/palestrantes/fabiano-goes', 2)
         self.assertContains(self.resp, u'Passionate software developer!', 2)
         self.assertContains(self.resp, u'Fabiano Góes', 2)

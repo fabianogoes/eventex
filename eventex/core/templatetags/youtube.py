@@ -37,4 +37,4 @@ class YoutubeNode(Node):
         return t.render(c)
 
 register = Library()
-register.tag('youtube', do_youtube)
+register.tag("youtube", do_youtube)

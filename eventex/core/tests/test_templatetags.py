@@ -4,7 +4,7 @@ from django.template import Template, Context
 class YoutubeTagTest(TestCase):
     def setUp(self):
         context = Context({'ID': 1})
-        template = Template('{% load youtube %}{% youtube ID %}')
+        template = Template("{% load youtube %}{% youtube ID %}")
         self.content = template.render(context)
 
     def test_output(self):
