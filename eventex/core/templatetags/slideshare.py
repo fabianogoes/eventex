@@ -2,7 +2,7 @@ from django import template
 from django.template import Context, Template, Node
  
  
-TEMPLATE = TEMPLATE = '<iframe src="http://www.slideshare.net/slideshow/embed_code/{{id}}" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="max-width:427px;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/raphaelfranca/flisol-bootstrap" title="Twitter Bootstrap " target="_blank">Twitter Bootstrap </a> </strong> from <strong><a href="http://www.slideshare.net/raphaelfranca" target="_blank">Raphael França</a></strong> </div>'
+TEMPLATE = TEMPLATE = u'<iframe src="http://www.slideshare.net/slideshow/embed_code/{{id}}" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="max-width:427px;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/raphaelfranca/flisol-bootstrap" title="Twitter Bootstrap " target="_blank">Twitter Bootstrap </a> </strong> from <strong><a href="http://www.slideshare.net/raphaelfranca" target="_blank">Raphael França</a></strong> </div>'
  
  
 def do_slideshare(parser, token):
