@@ -12,6 +12,11 @@ def speaker_detail(request, slug):
     context = {'speaker': speaker}
     return render(request, 'core/speaker_detail.html', context)
 
+def speaker_list(request):
+    speakers = Speaker.objects.all()
+    context = {'speakers': speakers}
+    return render(request, 'core/speaker_list.html', context)
+
 def talk_detail(request, pk):
     """
      Código refatorado, foi criado as properties:

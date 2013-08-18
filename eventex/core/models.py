@@ -88,7 +88,7 @@ class Media(models.Model):
     kind = models.CharField(_('Tipo'), max_length=2, choices=MEDIAS)
     title = models.CharField(_(u'Título'), max_length=200)
     media_id = models.CharField(_('ID_Ref'), max_length=255)
-    media_doc = models.CharField(_('Doc_Slide'), max_length=255)
+    media_doc = models.CharField(_('Doc_Slide'), max_length=255, default="0")
 
     def __unicode__(self):
         return u'%s - %s' % (self.talk.title, self.title)        

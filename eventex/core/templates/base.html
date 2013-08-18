@@ -30,6 +30,8 @@
               <div class="nav-collapse collapse bs-navbar-collapse">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="/">EventeX</a></li>
+                  
+                  <!-- inscrições -->
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="icon-pencil icon-white"></i>&nbsp;Inscrições<b class="caret"></b></a>
@@ -39,6 +41,10 @@
                         <li><a href="/admin/subscriptions/subscription/" target="__blank">
                             <i class="icon-list icon-white"></i>&nbsp;Lista de Inscritos</a></li>
                       </ul>
+                  </li>
+                  <!-- inscrições -->
+
+                  <!-- palestras -->
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                           <i class="icon-tags icon-white"></i>&nbsp;Palestras<b class="caret"></b></a>
@@ -48,8 +54,29 @@
                         <li><a href="{% url 'core:talk_list' %}">
                             <i class="icon-list icon-white"></i>&nbsp;Lista de Palestras</a></li>
                       </ul>
-                  <li><a href="#myModal" role="button" data-toggle="modal">
-                      <i class="icon-info-sign icon-white"></i>&nbsp;Sobre</a></li>
+                  </li>
+                  <!-- palestras -->
+
+                  <!-- palestrantes -->
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="icon-tags icon-white"></i>&nbsp;Palestrantes<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/admin/core/speaker/add/" target="__blank">
+                            <i class="icon-plus icon-white"></i>&nbsp;Cadastrar Palestrante</a></li>
+                        <li><a href="{% url 'core:speaker_list' %}">
+                            <i class="icon-list icon-white"></i>&nbsp;Lista de Palestrantes</a></li>
+                      </ul>
+                  </li>
+                  <!-- palestrantes -->
+
+                  <!-- sobre -->
+                  <li>
+                      <a href="#myModal" role="button" data-toggle="modal">
+                      <i class="icon-info-sign icon-white"></i>&nbsp;Sobre</a>
+                  </li>
+                  <!-- sobre -->
+
                 </ul>
               </div><!--/.nav-collapse -->
             </div>

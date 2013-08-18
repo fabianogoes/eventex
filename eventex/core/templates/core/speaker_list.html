@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3>Pelestrantes cadastrados</h3>
+    <hr />
+    {% for speaker in speakers %}
+        <h4><a href="{{ speaker.url }}">{{ speaker.name }}</a></h4>
+        <p>{{ speaker.description }}</p>
+    {% empty %}
+        <p>Não existem palestrantes cadastrados.</p>
+    {% endfor %}
+{% endblock content %}
