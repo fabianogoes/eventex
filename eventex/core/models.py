@@ -70,3 +70,16 @@ class CodingCourse(Course):
     
     def do_some_python_stuff(self):
         return "Let's hack! at %s" % self.title    
+
+class Media(models.Model):
+    MEDIAS = (
+        ('YT', _('YouTube')),
+        ('SL', _('SlideShare')),
+    )
+    talk = models.ForeignKey('Talk')
+    kind = models.CharField(_('Tipo'), max_length=2, choices=MEDIAS)
+    title = models.CharField(_(u'Título'), max_length=2)
+    media_id = models.CharField(_('Ref'), max_length=255)
+
+    def __unicode__(self):
+        return u'%s - %s' % (self.talk.title, self.title)        

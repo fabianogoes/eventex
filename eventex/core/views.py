@@ -12,14 +12,19 @@ def speaker_detail(request, slug):
     context = {'speaker': speaker}
     return render(request, 'core/speaker_detail.html', context)
 
+def talk_detail(request, pk):
+    talk = get_object_or_404(Talk, pk=pk)
+    #talk = Talk()
+    context = {
+        'talk': talk,
+        'slides': talk.media_set.filter(kind='SL'),
+        'videos': talk.media_set.filter(kind='YT'),
+    }
+    return render(request, 'core/talk_detail.html', context)
+
 def talk_list(request):
     context = {
         'morning_talks': Talk.objects.at_morning(),
         'afternoon_talks': Talk.objects.at_afternoon(),
     }
     return render(request, 'core/talk_list.html', context)
-
-def talk_detail(request, pk):
-    talk = get_object_or_404(Talk, pk=pk)
-    context = {'talk': talk }
-    return render(request, 'core/talk_detail.html', context)    
