@@ -33,9 +33,9 @@ class MultipleEmailsTest(TestCase):
     def setUp(self):
         UserModel = get_user_model()
         UserModel.objects.create_user(username='user1',
-        email='henrique@bastos.net', password='abracadabra')
+                email='henrique@bastos.net', password='abracadabra')
         UserModel.objects.create_user(username='user2',
-        email='henrique@bastos.net', password='abracadabra')
+                email='henrique@bastos.net', password='abracadabra')
         self.backend = EmailBackend()
 
     def test_multiple_emails(self):

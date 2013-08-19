@@ -145,10 +145,10 @@ INSTALLED_APPS = (
 
 AUTH_USER_MODEL='myauth.User'
 
-#AUTHENTICATION_BACKENDS = (
-#    'eventex.myauth.backends.EmailBackend',
-#    'django.contrib.auth.backends.ModelBackend',
-#)
+# AUTHENTICATION_BACKENDS = (
+#     'eventex.myauth.backends.EmailBackend',
+#     'django.contrib.auth.backends.ModelBackend',
+# )
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
